@@ -10,7 +10,6 @@ namespace ShadeClient.Audio
     public class Microphone
     {
         private WaveInEvent _waveIn;
-        private byte[] _buffer;
 
         public Microphone()
         {
