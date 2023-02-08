@@ -32,7 +32,6 @@ namespace ShadeClient.Audio
             _waveIn.StopRecording();
         }
 
-
         public event EventHandler<byte[]> DataAvailable;
 
         private void OnDataAvailable(object sender, WaveInEventArgs e)
