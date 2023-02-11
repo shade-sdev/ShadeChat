@@ -13,6 +13,9 @@ namespace ShadeClient
 {
     public partial class ShatClient : Form
     {
+
+        private Client client;
+
         public ShatClient()
         {
             InitializeComponent();
@@ -20,10 +23,16 @@ namespace ShadeClient
 
         private void ShatClient_Load(object sender, EventArgs e)
         {
-            Client client = new Client("192.168.100.42", 9090);
+            client = new Client("192.168.100.42", 9090);
             client.Connect();
-            client.SendAudio();
-            client.ReceiveAudio();
+            //client.SendAudio();
+            //client.ReceiveAudio();
+            client.ReceiveMessage();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            client.SendMessage(1, chatText.Text);
         }
     }
 }
