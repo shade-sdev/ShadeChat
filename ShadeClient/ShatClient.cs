@@ -25,8 +25,8 @@ namespace ShadeClient
         {
             client = new Client("192.168.100.42", 9090);
             client.Connect();
-            //client.SendAudio();
-            //client.ReceiveAudio();
+            client.SendAudio();
+            client.ReceiveAudio();
             client.ReceiveMessage();
         }
 
